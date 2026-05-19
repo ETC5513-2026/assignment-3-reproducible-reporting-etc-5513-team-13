@@ -2,7 +2,7 @@
 
 Group Members:
 
-*
+* Aryaman Dhindsa - 35683422
 *
 *
 
