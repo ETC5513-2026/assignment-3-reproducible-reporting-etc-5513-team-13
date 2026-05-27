@@ -1,0 +1,24 @@
+---
+title: ""
+author:
+  - "Aryaman Dhindsa"
+  - "Joshua Bannon"
+  - "Smit Tambat"
+  - "Chunjian Zhang"
+course: "ETC5513"
+unit: "Collaborative and Reproducible Practices"
+semester: "Semester 1, 2026"
+date: "27 May 2026"
+format: html
+self-contained: TRUE
+---
+
+## Executive Summary
+
+## Introduction
+
+## Methodology
+
+## Result
+
+## Conclusion and Recommendations
