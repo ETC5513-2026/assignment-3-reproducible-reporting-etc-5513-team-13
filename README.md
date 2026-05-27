@@ -6,5 +6,5 @@ Group Members:
 * Aryaman Dhindsa - 35683422
 * Joshua Bannon - 32592582
 * Smit Tambat - 36881880 
-
+* Chunjian Zhang - 35962712
 Topic: 
