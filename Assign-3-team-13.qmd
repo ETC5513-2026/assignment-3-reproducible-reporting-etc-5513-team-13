@@ -16,7 +16,11 @@ self-contained: TRUE
 # Executive Summary
 
 # Introduction
+<<<<<<< HEAD
 When COVID-19 forced much of the world indoors, streaming quickly became one of the few forms of entertainment people could still rely on. Netflix, already the largest subscription service, was an obvious beneficiary of all that extra time spent at home. What is less obvious is whether all those new viewers were actually any happier with what they were watching. This report looks at that question through audience vote ratings, asking whether the average rating of Netflix films shifted before, during, and after the pandemic. We split the data into three periods which are pre-COVID (2010–2019), the COVID years (2020–2021), and post-COVID (2022–2024) and compare the average ratings across them. We focus on ratings rather than the number of films released, since the dataset holds a fixed number of titles per year and so cannot tell us anything meaningful about output. Specifically, we ask: **Did the average audience vote rating of Netflix films change before, during, and after COVID-19?**
+=======
+This report examines how the production budgets and box-office revenues of Netflix films changed before, during, and after COVID-19 period. We define three periods: pre-COVID (2016-2019), COVID (2020-2021), and post-COVID (2022-2023). Using a public dataset of Netflix films titles, we compare yearly means of budget and revenue across these periods to identify any pandemic related shifts. The analysis focuses on financial measures rather than release volume, as the dataset is balanced by release year and therefore unsuitable for measuring output. Understanding these patterns offers insight into how the pandemic affected the economics of Netflix film production. Specifically, we ask: **How did the Budgets and Revenues of Netflix films change before, during, and after COVID-19?** 
+>>>>>>> d62c3bf (Updated Analysis - budget and revenue across COVID periods)
 
 # Methodology
 The analysis draws on a public dataset of 16,000 Netflix film titles, each recorded with its release year and an average audience vote score. We dropped the 2025 titles before doing anything else. Those films had only just been released, most had barely been rated, and leaving them in pulled the averages down to numbers that clearly weren't real. That left 15,000 films spanning 2010 to 2024 to work with.
@@ -28,7 +32,7 @@ pre-COVID (2010–2019), COVID (2020–2021), and post-COVID (2022–2024). For 
 
 ```{r}
 #| label: fig-yearly
-#| fig-cap: "Yearly mean audience vote average for Netflix films, 2010–2024."
+#| fig-cap: "Yearly mean budget and revenue for Netflix films, 2016–2023 (USD)."
 #| echo: false
 #| message: false
 #| warning: false
@@ -36,25 +40,36 @@ pre-COVID (2010–2019), COVID (2020–2021), and post-COVID (2022–2024). For 
 library(tidyverse)
 
 netflix <- read_csv("data/netflix_data.csv") |>
-  filter(release_year <= 2024)
+  filter(release_year >= 2016, release_year <= 2023,
+         budget > 0, revenue > 0)
 
 yearly <- netflix |>
   group_by(release_year) |>
-  summarise(mean_vote = mean(vote_average, na.rm = TRUE))
+  summarise(
+    `Mean budget` = mean(budget, na.rm = TRUE),
+    `Mean revenue` = mean(revenue, na.rm = TRUE)
+  ) |>
+  pivot_longer(cols = c(`Mean budget`, `Mean revenue`),
+               names_to = "Measure", values_to = "USD")
 
-ggplot(yearly, aes(x = release_year, y = mean_vote)) +
-  geom_line(colour = "#E50914", linewidth = 1) +
-  geom_point(colour = "#E50914") +
+ggplot(yearly, aes(x = release_year, y = USD, colour = Measure)) +
+  geom_line(linewidth = 1) +
+  geom_point() +
   geom_vline(xintercept = c(2020, 2021), linetype = "dashed",
              colour = "grey50") +
-  labs(x = "Release year", y = "Mean vote average") +
-  theme_minimal()
+  scale_y_continuous(labels = scales::label_dollar(scale = 1e-6,
+                                                    suffix = "M")) +
+  scale_colour_manual(values = c("Mean budget" = "#221F1F",
+                                  "Mean revenue" = "#E50914")) +
+  labs(x = "Release year", y = "Mean (USD)", colour = NULL) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
 ```
 
 ```{r}
 #| label: tbl-periods
-#| tbl-cap: "Mean audience vote average and film count by COVID-19 period."
-#| tbl-cap-location: bottom 
+#| tbl-cap: "Mean budget and revenue by COVID-19 period (USD millions)."
+#| tbl-cap-location: bottom
 #| echo: false
 #| message: false
 #| warning: false
@@ -63,17 +78,18 @@ library(knitr)
 
 netflix |>
   mutate(period = case_when(
-    release_year <= 2019 ~ "Pre-COVID (2010–2019)",
+    release_year <= 2019 ~ "Pre-COVID (2016–2019)",
     release_year <= 2021 ~ "COVID (2020–2021)",
-    TRUE                 ~ "Post-COVID (2022–2024)"
+    TRUE                 ~ "Post-COVID (2022–2023)"
   )) |>
   group_by(period) |>
   summarise(
-    `Mean vote average` = round(mean(vote_average, na.rm = TRUE), 3),
+    `Mean budget (USD M)` = round(mean(budget, na.rm = TRUE) / 1e6, 1),
+    `Mean revenue (USD M)` = round(mean(revenue, na.rm = TRUE) / 1e6, 1),
     `Number of films` = n()
   ) |>
   arrange(factor(period, levels = c(
-    "Pre-COVID (2010–2019)", "COVID (2020–2021)", "Post-COVID (2022–2024)"
+    "Pre-COVID (2016–2019)", "COVID (2020–2021)", "Post-COVID (2022–2023)"
   ))) |>
   rename(Period = period) |>
   kable()
