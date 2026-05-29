@@ -140,7 +140,10 @@ This analysis examined Netflix film budget and revenue dynamics across pre-COVID
 
 Critical limitations of the analysis must be acknowledged. First, inconsistent periodization undermines result validity: grouping 2019 into the COVID period artificially inflates pandemic-era revenue averages, blurring the true 2020–2021 shock. Second, reliance on mean values masks critical variability: aggregate averages obscure disparities between low- and high-budget films and flatten the distinct annual recovery trend visible in @fig-yearly. Finally, the dataset lacks contextual variables (e.g., theatrical vs. streaming releases, regional markets, subscriber growth), limiting causal inference about pandemic impacts. Collectively, these flaws mean the findings only reflect correlational trends, not definitive causal relationships between the pandemic and Netflix’s film economics.
 
-# Conclusion and Recommendations
+# Conclusion
+This study analyzed Netflix film budgets, revenues, and release volumes before, during, and after the COVID-19 pandemic, addressing the research question of how these metrics shifted across periods. Results confirm an immediate pandemic-driven revenue decline alongside modest budget growth, followed by a sustained revenue recovery through 2023—leaving post-COVID revenues below pre-pandemic levels. Release volume, by contrast, recovered partially, though it remains below pre-pandemic output. Key limitations include inconsistent time period definitions, overreliance on aggregate means, and a lack of contextual variables, which restrict the generalizability and causal interpretability of the findings. Overall, the pandemic reshaped Netflix’s film economics, creating temporary streaming-driven revenue gains but leaving persistent impacts on both financial performance and production scale.
+
+# Recommendations
 
 
 # References
