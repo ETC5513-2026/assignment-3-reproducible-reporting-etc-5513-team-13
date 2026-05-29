@@ -135,9 +135,24 @@ period_summary |>
 ```
 @tbl-movie-release highlights the average number of movies released per year across the three periods. The pre-COVID period recorded the highest average, with approximately 263 movies released annually. During COVID, the average dropped significantly to around 167 movies per year, reflecting production disruptions. Post-COVID releases partially recovered, increasing to an average of 188 movies annually.
 
+# Discussion
+This analysis examined Netflix film budget and revenue dynamics across pre-COVID (2016–2018), COVID (2019–2021), and post-COVID (2022–2024) periods, alongside release volume trends. @tbl-periods reveals a clear pandemic-driven shock: average revenue declined from $117.4 million (pre-COVID) to $99.6 million (COVID), while budgets rose modestly (from $35.0 million to $38.0 million), indicating inflexible production spending amid demand disruption. A notable revenue recovery began in 2021 (≈$95 million, @fig-yearly) coinciding with pandemic-era streaming growth, and this upward trajectory continued—revenues rose steadily in 2022–2023 to ≈$115 million, though post-COVID averages ($107.3 million) still remain below pre-pandemic levels. @tbl-movie-release, however, showed a more tangible recovery: annual output fell from 262.7 to 166.7 films during COVID, then rose to 188.0 post-COVID, reflecting gradual production normalization.
 
-# Conclusion and Recommendations
+Critical limitations of the analysis must be acknowledged. First, inconsistent periodization undermines result validity: grouping 2019 into the COVID period artificially inflates pandemic-era revenue averages, blurring the true 2020–2021 shock. Second, reliance on mean values masks critical variability: aggregate averages obscure disparities between low- and high-budget films and flatten the distinct annual recovery trend visible in @fig-yearly. Finally, the dataset lacks contextual variables (e.g., theatrical vs. streaming releases, regional markets, subscriber growth), limiting causal inference about pandemic impacts. Collectively, these flaws mean the findings only reflect correlational trends, not definitive causal relationships between the pandemic and Netflix’s film economics.
 
+# Conclusion
+This study analyzed Netflix film budgets, revenues, and release volumes before, during, and after the COVID-19 pandemic, addressing the research question of how these metrics shifted across periods. Results confirm an immediate pandemic-driven revenue decline alongside modest budget growth, followed by a sustained revenue recovery through 2023—leaving post-COVID revenues below pre-pandemic levels. Release volume, by contrast, recovered partially, though it remains below pre-pandemic output. Key limitations include inconsistent time period definitions, overreliance on aggregate means, and a lack of contextual variables, which restrict the generalizability and causal interpretability of the findings. Overall, the pandemic reshaped Netflix’s film economics, creating temporary streaming-driven revenue gains but leaving persistent impacts on both financial performance and production scale.
+
+# Recommendations
+Refine periodization: Test alternative pandemic groupings (e.g., pre-2020, 2020–2021, post-2021) to eliminate 2019 misclassification and validate trend robustness.
+
+Stratified analysis: Move beyond mean values to examine budget/revenue distributions by film genre, budget tier, and release platform (theatrical vs. streaming) to uncover hidden patterns.
+
+Integrate contextual variables: Incorporate subscriber growth, regional economic indicators, and theatrical release data to enable causal inference about pandemic impacts.
+
+Long-term monitoring: Extend the dataset to 2025 to capture full post-pandemic recovery dynamics and assess long-term shifts in Netflix’s film strategy.
+
+Comparative analysis: Benchmark Netflix’s performance against other streaming studios (e.g., Disney+, Amazon Prime Video) to contextualize pandemic impacts within the broader industry.
 
 # References
 ::: {#refs}
