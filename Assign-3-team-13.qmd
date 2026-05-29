@@ -24,7 +24,7 @@ This report examines how the production budgets and box-office revenues of Netfl
 The analysis draws on a public dataset of 16,000 Netflix film titles, each recorded with its release year and an average audience vote score. We dropped the 2025 titles before doing anything else. Those films had only just been released, most had barely been rated, and leaving them in pulled the averages down to numbers that clearly weren't real. That left 15,000 films spanning 2010 to 2024 to work with.
 
 To get at the pandemic question, we sorted the films into three periods:
-pre-COVID (2010–2019), COVID (2019–2021), and post-COVID (2022–2023). For each period we worked out the mean budget, which gives us a simple way to compare how much the revenue changed compared to the budget across the three windows. We also calculated the average rating year by year, so we could see the smaller movements that a three-way split tends to hide. Everything was done in R using the `tidyverse` packages, and the code sits in the same Quarto document as this report so the whole thing can be reproduced from the raw data.
+pre-COVID (2010–2019), COVID (2019–2021), and post-COVID (2022–2023). For each period we worked out the mean budget, which gives us a simple way to compare how much the revenue changed compared to the budget across the three windows. We also calculated the average rating year by year, so we could see the smaller movements that a three-way split tends to hide. Everything was done in R using the `tidyverse` @tidyverse packages, and the code sits in the same Quarto document as this report so the whole thing can be reproduced from the raw data.
 
 @fig-yearly plots the yearly average rating from 2010 to 2024, with the two pandemic years marked so any shift around them is easy to spot. @tbl-periods then pulls this together, showing the mean budget and mean revenue in each period side by side. Between them, the figure gives the year-to-year detail and the table gives the bigger comparison.
 
@@ -98,7 +98,7 @@ As shown in @fig-yearly, revenue experienced a sharp decline at the beginning of
 
 The budget reached approximately $45 million in 2021 and subsequently fluctuated between $25 million and $50 million through 2023. Revenue, on the other hand, increased substantially after 2020 and continued to show steady growth from 2021 onward.
 
-A summarized comparison of the pre-COVID, during-COVID, and post-COVID periods is also presented in @tbl-periods.
+A summarized comparison of the pre-COVID, during-COVID, and post-COVID periods is also presented in @tbl-periods using GGplot2 @GGplot2.
 
 ```{r}
 #| label: tbl-movie-release
@@ -138,3 +138,7 @@ period_summary |>
 
 # Conclusion and Recommendations
 
+
+# References
+::: {#refs}
+:::
