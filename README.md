@@ -7,4 +7,5 @@ Group Members:
 * Joshua Bannon - 32592582
 * Smit Tambat - 36881880 
 * Chunjian Zhang - 35962712
-Topic: 
+
+Topic: Netflix Budget and Revenue Change during COVID-19 period 
