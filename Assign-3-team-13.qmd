@@ -16,11 +16,10 @@ self-contained: TRUE
 # Executive Summary
 
 # Introduction
-<<<<<<< HEAD
+
 When COVID-19 forced much of the world indoors, streaming quickly became one of the few forms of entertainment people could still rely on. Netflix, already the largest subscription service, was an obvious beneficiary of all that extra time spent at home. What is less obvious is whether all those new viewers were actually any happier with what they were watching. This report looks at that question through audience vote ratings, asking whether the average rating of Netflix films shifted before, during, and after the pandemic. We split the data into three periods which are pre-COVID (2010–2019), the COVID years (2020–2021), and post-COVID (2022–2024) and compare the average ratings across them. We focus on ratings rather than the number of films released, since the dataset holds a fixed number of titles per year and so cannot tell us anything meaningful about output. Specifically, we ask: **Did the average audience vote rating of Netflix films change before, during, and after COVID-19?**
-=======
+
 This report examines how the production budgets and box-office revenues of Netflix films changed before, during, and after COVID-19 period. We define three periods: pre-COVID (2016-2019), COVID (2020-2021), and post-COVID (2022-2023). Using a public dataset of Netflix films titles, we compare yearly means of budget and revenue across these periods to identify any pandemic related shifts. The analysis focuses on financial measures rather than release volume, as the dataset is balanced by release year and therefore unsuitable for measuring output. Understanding these patterns offers insight into how the pandemic affected the economics of Netflix film production. Specifically, we ask: **How did the Budgets and Revenues of Netflix films change before, during, and after COVID-19?** 
->>>>>>> d62c3bf (Updated Analysis - budget and revenue across COVID periods)
 
 # Methodology
 The analysis draws on a public dataset of 16,000 Netflix film titles, each recorded with its release year and an average audience vote score. We dropped the 2025 titles before doing anything else. Those films had only just been released, most had barely been rated, and leaving them in pulled the averages down to numbers that clearly weren't real. That left 15,000 films spanning 2010 to 2024 to work with.
@@ -55,7 +54,7 @@ yearly <- netflix |>
 ggplot(yearly, aes(x = release_year, y = USD, colour = Measure)) +
   geom_line(linewidth = 1) +
   geom_point() +
-  geom_vline(xintercept = c(2020, 2021), linetype = "dashed",
+  geom_vline(xintercept = c(2019, 2021), linetype = "dashed",
              colour = "grey50") +
   scale_y_continuous(labels = scales::label_dollar(scale = 1e-6,
                                                     suffix = "M")) +
