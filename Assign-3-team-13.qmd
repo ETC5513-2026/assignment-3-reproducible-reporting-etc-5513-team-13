@@ -11,6 +11,7 @@ semester: "Semester 1, 2026"
 date: "27 May 2026"
 format: html
 self-contained: TRUE
+bibliography: reference.bib
 ---
 
 ## Executive Summary
