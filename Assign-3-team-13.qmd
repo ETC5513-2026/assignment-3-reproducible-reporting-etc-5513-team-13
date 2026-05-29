@@ -15,6 +15,8 @@ self-contained: TRUE
 
 ## Executive Summary
 
+Netflix’s film production and revenue patterns were influenced by the COVID-19 pandemic, creating significant challenges and opportunities across the entertainment industry. This report investigates how the budgets and box-office revenues of Netflix films changed before, during, and after the pandemic using a public dataset of Netflix film titles. Financial trends were analysed to identify changes in production investment and revenue performance across the three periods. The findings provide insight into the impact of COVID-19 on Netflix’s film economics and highlight considerations for future content investment strategies.
+
 ## Introduction
 
 ## Methodology
