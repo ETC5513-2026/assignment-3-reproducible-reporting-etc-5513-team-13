@@ -15,7 +15,6 @@
 
 # Output files
 *.html
-*.pdf
 *.docx
 
 # Quarto / Knitr cache
