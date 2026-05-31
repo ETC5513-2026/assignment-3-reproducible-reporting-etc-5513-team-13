@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Netflix Film Economics During COVID-19"
 author:
   - "Aryaman Dhindsa"
   - "Joshua Bannon"
@@ -8,7 +8,7 @@ author:
 course: "ETC5513"
 unit: "Collaborative and Reproducible Practices"
 semester: "Semester 1, 2026"
-date: "27 May 2026"
+date: "31 May 2026"
 format: html
 self-contained: TRUE
 bibliography: reference.bib
