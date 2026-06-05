@@ -44,4 +44,20 @@ How did Netflix film budgets and revenues change before, during and after COVID-
 -   Revenue (USD)
 -   Audience ratings
 
+## Methodology
+
+## Data Preparation
+
+-   Removed 2025 releases
+-   Cleaned and filtered movie records
+-   Grouped films into COVID periods
+
+### COVID Periods
+
+| Period     | Years     |
+|------------|-----------|
+| Pre-COVID  | 2016–2018 |
+| COVID      | 2019–2021 |
+| Post-COVID | 2022–2024 |
+
 
