@@ -105,4 +105,22 @@ ggplot(yearly, aes(x = release_year, y = USD, colour = Measure)) +
   theme(legend.position = "bottom")
 ```
 
+## Key Findings
+
+-   Revenue declined sharply at the beginning of the COVID period.
+-   Budgets remained relatively stable.
+-   Revenue recovered strongly after 2020.
+-   Budgets increased through 2021 before stabilising
+
+## Results: Period Comparison
+
+| Period     | Mean Budget | Mean Revenue |
+|------------|-------------|--------------|
+| Pre-COVID  | 35.0        | 117.4        |
+| COVID      | 38.0        | 99.6         |
+| Post-COVID | 43.1        | 107.3        |
+
+### Key Takeaway
+
+Budgets increased throughout the pandemic while revenues fell during COVID and only partially recovered afterwards.
 
