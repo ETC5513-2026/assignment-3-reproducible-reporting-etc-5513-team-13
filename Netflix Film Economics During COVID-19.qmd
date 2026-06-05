@@ -60,4 +60,49 @@ How did Netflix film budgets and revenues change before, during and after COVID-
 | COVID      | 2019–2021 |
 | Post-COVID | 2022–2024 |
 
+## Analysis
+
+-   Calculated mean budgets by year
+-   Calculated mean revenues by year
+-   Compared averages across periods
+-   Examined release volume trends
+
+## Results: Budget and Revenue Trends
+
+```{r}
+#| label: fig-yearly
+#| fig-cap: "Yearly mean budget and revenue for Netflix films, 2016–2023 (USD)."
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+netflix <- read_csv("data/netflix_data.csv") |>
+  filter(release_year >= 2016, release_year <= 2024,
+         budget > 0, revenue > 0)
+
+yearly <- netflix |>
+  group_by(release_year) |>
+  summarise(
+    `Mean budget` = mean(budget, na.rm = TRUE),
+    `Mean revenue` = mean(revenue, na.rm = TRUE)
+  ) |>
+  pivot_longer(cols = c(`Mean budget`, `Mean revenue`),
+               names_to = "Measure", values_to = "USD")
+
+ggplot(yearly, aes(x = release_year, y = USD, colour = Measure)) +
+  geom_line(linewidth = 1) +
+  geom_point() +
+  geom_vline(xintercept = c(2019, 2021), linetype = "dashed",
+             colour = "grey50") +
+  scale_y_continuous(labels = scales::label_dollar(scale = 1e-6,
+                                                    suffix = "M")) +
+  scale_colour_manual(values = c("Mean budget" = "#221F1F",
+                                  "Mean revenue" = "#E50914")) +
+  labs(x = "Release year", y = "Mean (USD)", colour = NULL) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
 
