@@ -1,0 +1,18 @@
+---
+title: "Netflix Film Economics During COVID-19"
+subtitle: "How did Netlfix film budgets, revenues, and release volumes change before, during and after COVID-19?"
+author:
+  Joshua Bannon
+  Aryaman Dhindsa
+  Smit Tambat
+  Chunjian Zhang
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    transition: fade
+    toc: false
+    embed-resources: true
+editor: visual
+---
+
