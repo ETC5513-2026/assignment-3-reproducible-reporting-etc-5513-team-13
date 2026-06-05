@@ -16,3 +16,10 @@ format:
 editor: visual
 ---
 
+## Problem Introduction
+
+COVID-19 significantly disrupted the global entertainment industry, affecting film production, cinema attendance, and consumer viewing habits.
+
+As audiences increasingly turned to streaming services during lockdowns, Netflix experienced changes in both content production and revenue performance.
+
+This study investigates how Netflix film budgets, revenues, and release volumes changed before, during, and after the COVID-19 pandemic.
