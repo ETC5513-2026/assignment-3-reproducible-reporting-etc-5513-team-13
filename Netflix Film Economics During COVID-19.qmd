@@ -28,3 +28,20 @@ This study investigates how Netflix film budgets, revenues, and release volumes 
 
 How did Netflix film budgets and revenues change before, during and after COVID-19
 
+## Datatset Description
+
+### Dataset Overview
+
+-   Public Netflic film dataset
+-   Approximately 16,000 movie records
+-   2025 releases removed from the analysis
+-   Final dataset contained approximately 15,000 files
+
+### Varibles Used
+
+-   Release year
+-   Budget (USD)
+-   Revenue (USD)
+-   Audience ratings
+
+
