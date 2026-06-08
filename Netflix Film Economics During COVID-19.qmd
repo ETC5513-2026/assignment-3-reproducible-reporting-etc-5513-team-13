@@ -1,6 +1,6 @@
 ---
 title: "Netflix Film Economics During COVID-19"
-subtitle: "How did Netlfix film budgets, revenues, and release volumes change before, during and after COVID-19?"
+subtitle: "How did Netflix film budgets, revenues, and release volumes change before, during and after COVID-19?"
 author:
   Joshua Bannon
   Aryaman Dhindsa
@@ -26,31 +26,31 @@ This study investigates how Netflix film budgets, revenues, and release volumes 
 
 ## Research Question
 
-How did Netflix film budgets and revenues change before, during and after COVID-19
+How did Netflix film budgets and revenues change before, during and after COVID-19?
 
-## Datatset Description
+## Dataset Description
 
 ### Dataset Overview
 
--   Public Netflic film dataset
--   Approximately 16,000 movie records
--   2025 releases removed from the analysis
--   Final dataset contained approximately 15,000 files
+- Public Netflic film dataset
+- Approximately 16,000 movie records
+- 2025 releases removed from the analysis
+- Final dataset contained approximately 15,000 films
 
-### Varibles Used
+### Variables Used
 
--   Release year
--   Budget (USD)
--   Revenue (USD)
--   Audience ratings
+- Release year
+- Budget (USD)
+- Revenue (USD)
+- Audience ratings
 
 ## Methodology
 
 ## Data Preparation
 
--   Removed 2025 releases
--   Cleaned and filtered movie records
--   Grouped films into COVID periods
+- Removed 2025 releases
+- Cleaned and filtered movie records
+- Grouped films into COVID periods
 
 ### COVID Periods
 
@@ -62,12 +62,12 @@ How did Netflix film budgets and revenues change before, during and after COVID-
 
 ## Analysis
 
--   Calculated mean budgets by year
--   Calculated mean revenues by year
--   Compared averages across periods
--   Examined release volume trends
+- Calculated mean budgets by year
+- Calculated mean revenues by year
+- Compared averages across periods
+- Examined release volume trends
 
-## Results: Budget and Revenue Trends
+## Results: Budget and Revenue Trends {.smaller}
 
 ```{r}
 #| label: fig-yearly
@@ -75,6 +75,8 @@ How did Netflix film budgets and revenues change before, during and after COVID-
 #| echo: false
 #| message: false
 #| warning: false
+#| fig-height: 3.5
+#| fig-width: 7
 
 library(tidyverse)
 
@@ -103,14 +105,15 @@ ggplot(yearly, aes(x = release_year, y = USD, colour = Measure)) +
   labs(x = "Release year", y = "Mean (USD)", colour = NULL) +
   theme_minimal() +
   theme(legend.position = "bottom")
+
 ```
 
 ## Key Findings
 
--   Revenue declined sharply at the beginning of the COVID period.
--   Budgets remained relatively stable.
--   Revenue recovered strongly after 2020.
--   Budgets increased through 2021 before stabilising
+- Revenue declined sharply at the beginning of the COVID period.
+- Budgets remained relatively stable.
+- Revenue recovered strongly after 2020.
+- Budgets increased through 2021 before stabilising
 
 ## Results: Period Comparison
 
@@ -120,7 +123,10 @@ ggplot(yearly, aes(x = release_year, y = USD, colour = Measure)) +
 | COVID      | 38.0        | 99.6         |
 | Post-COVID | 43.1        | 107.3        |
 
+
+*All figures in USD millions.*
+
+
+
 ### Key Takeaway
-
 Budgets increased throughout the pandemic while revenues fell during COVID and only partially recovered afterwards.
-
